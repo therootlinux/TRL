@@ -5,6 +5,6 @@ This directory contains comprehensive documentation related to our study and dev
 To maintain clarity and organization, the documentation is divided into two main subdirectories:
 
 - **Linux/** — Materials, references, and notes pertaining to the original Linux kernel.  
-- **TRL/** — Documentation specific to our custom kernel, TheRootLinux (TLR).
+- **TRL/** — Documentation specific to our custom kernel, TheRootLinux (TRL).
 
 This structure facilitates easy navigation between upstream kernel concepts and our own implementation details.
