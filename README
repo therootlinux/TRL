@@ -1,5 +1,7 @@
 i# TRLOS
 
+![License](https://img.shields.io/badge/license-GPLv2-blue.svg)
+
 TRLOS is a clean-room reimplementation of the Linux kernel, written from scratch, and licensed under the GNU General Public License v2 (GPL-2.0-only). It is the foundation for a new operating system built on original kernel code, informed by the design of Unix-like systems but free from legacy constraints.
 
 ## Project Goals
