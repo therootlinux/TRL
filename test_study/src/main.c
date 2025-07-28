@@ -5,6 +5,8 @@
 #include "limine.h"
 #include "util.h"
 
+#include "print.h"
+
 void kmain(void) {
     if (LIMINE_BASE_REVISION_SUPPORTED == false) {
         hcf();
@@ -17,10 +19,15 @@ void kmain(void) {
 
     struct limine_framebuffer *framebuffer = framebuffer_request.response->framebuffers[0];
 
-    for (size_t i = 0; i < 100; i++) {
-        volatile uint32_t *fb_ptr = framebuffer->address;
-        fb_ptr[i * (framebuffer->pitch / 4) + i] = 0xffffff;
+    // Clear screen (optional)
+    for (size_t y = 0; y < framebuffer->height; y++) {
+        for (size_t x = 0; x < framebuffer->width; x++) {
+            ((uint32_t *)framebuffer->address)[y * (framebuffer->pitch / 4) + x] = 0x000000;
+        }
     }
+
+    // Print "Hello" in white at (10, 10)
+    print("HELLO", 10, 10, 0xffffff);
 
     hcf();
 }
