@@ -1,4 +1,4 @@
-i# TRLOS
+# TRLOS
 
 ![License](https://img.shields.io/badge/license-GPLv2-blue.svg)
 
